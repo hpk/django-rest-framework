@@ -527,6 +527,7 @@ class SchemaGenerator(object):
             description = ''
             schema_cls = coreschema.String
             if model is not None:
+                model_field = None
                 # Attempt to infer a field description if possible.
                 try:
                     model_field = model._meta.get_field(variable)
